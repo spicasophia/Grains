@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Farm</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+}
+.contain {
+    margin:auto;
+    overflow:hidden;
+    background-image: url(https://i.ibb.co/Tcdxv55/farm2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 75%;
+    /* width: 100%; */
+}
+nav{
+  margin-top: 10px;
+}
+  .text-link{
+    float: left;
+    margin-left: 40px;
+  }
+  .text-link a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+  }
+  .nav{
+    float: right;
+  }
+  .nav .active a{
+    color: orange;
+  }
+  .nav li  {
+    display:inline;
+    padding-right: 25px;
+    opacity: 0.75;
+  }
+  .nav li:hover {
+    opacity: 1;
+  }
+  .nav li::before{
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+  }
+  .nav li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  #caps {
+    color: orange;
+    font-size:25px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .showcase{
+    margin-top: 120px;
+    width: 50%;
+    margin-left: 50px;
+    margin-bottom: 120px;
+  }
+  .showcase h2{
+    font-size: 50px;
+    margin-bottom: 0px;
+    color: white;
+
+  }
+  .showcase p{
+    font-size: 18px;
+    color: white;
+  }
+  .showcase button{
+    padding: 10px;
+    margin-right: 20px;
+  }
+  .bovie {
+    background-color: orange;
+    border-color: orange;
+    border-style: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .bovie a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+
+  }
+  .maggie{
+    border: 2px solid white;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  .maggie a{
+    text-decoration: none;
+    color: white;
+  }
+  .main{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .first {
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 60px;
+  }
+  .first h3{
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .first button{
+    padding: 8px;
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    border-style: none;
+    font-weight: bold;
+
+  }
+  .second{
+    width: 45%;
+    float: left;
+    padding-left: 10px;
+  }
+
+  .second h3{
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+.second ul {
+  list-style: none;
+}
+
+.second ul li::before {
+  font-weight: bold;
+  content: "\2022";  
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; 
+  margin-left: -1em;
+}
+.buyProducts{
+    background-color: bisque;
+    display: flex;
+    width: 100%;
+}
+.buyProducts h2{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.wallet{
+    width: 45%;
+}
+.add{
+    width: 45%;
+}
+form {
+  width: 50%;
+  margin: 0 auto;  
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 25px;
+  color: #ffff;
+}
+input[type=text] {
+  width: 100%;
+  padding: 16px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  }
+  textarea{
+    width: 100%;
+  }
+#notification{
+    margin-left: 30px;
+}
+</style>
+<body>
+    <div class="contain">
+        <nav>
+            <div class="text-link">
+                <a href="#">gra<span id="caps">i</span>ns</a>
+            </div>
+        <div class="nav">
+            <ul>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Services</a></li>
+              <li><a href="#labourers">Hire a Labourer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="showcase">
+        <h2>Agricultural <br> Growing Farm</h2>
+        <p>Improved Productivity at all times is our promise to our customers</p>
+        <button class="bovie"><a href="#products">Buy Agric Products</a></button>
+        <button class="maggie"><a href="#labourers">Hire Labourers</a></button>
+    </section>
+    </div>
+    <div class="main" id="about">
+        <div class="first">
+            <h3>growing fresh produce has never <br> been easier</h3>
+            <p>With the use of mechanized farming and technology we produce fresh agricultural produce.</p>
+            <p>Our crops are matured and very healthy. </p>
+            <p>We also sell agricultural machines and equipments</p>
+
+            <button>Get Started</button>
+        </div>
+        <div class="second">
+            <h3>Benefits of Our Farms</h3>
+            <ul>
+                <li>Increased Productivity</li>
+                <li>Better farm Produce</li>
+                <li>Higher Earnings</li>
+                <li>Dedicated Farmers</li>
+                <li>Improved Livestock</li>
+                <li>Authentic fertilizers</li>
+            </ul>
+        </div>
+    </div>
+    <section class="equipment_section layout_padding" id="products">
+
+           <h2 style="text-align:center;background-color:black; color: white;">Buy Farm Equiments/Products</h2>
+
+           <div class="container mt-2" style="max-width: 72em">
+    
+            <nav class="navbar bg-dark text-light" id="#products">
+              <div class="container-fluid">
+                <span class="navbar-brand m-0 h4 fw-bold text-light">Wallet Balance </span>
+    
+                <span class="nav-link border rounded-pill" style="padding: 10px;">
+                  <span id="balance" style="color: dark;">0</span>
+                  cUSD
+                </span>
+              </div>
+            </nav>
+            <div class="alert alert-product alert-warning sticky-top mt-2" role="alert">
+              <span id="notification">⌛ Loading...</span>
+            </div>
+            <div class="mb-2" style="margin-top: 1em">
+              <a
+                class="btn btn-dark rounded-pill"
+                data-bs-toggle="modal"
+                data-bs-target="#addModal"
+    
+                style="color: white;"
+              >
+                Add product
+              </a>
+            </div><br><br>
+            <p class="bg-light text-dark"><span style="font-weight: bold;">Available Equipments</span>: <span id="equipmentCounts" class="font-monospace">0</span></p>
+    
+            <main id="Grainmarketplace" class="row mt-3"></main>
+          </div>
+<!--Modal-->
+<div
+class="modal fade"
+id="addModal"
+tabindex="-1"
+aria-labelledby="newProductModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title" id="newProductModalLabel">New Product</h5>
+<button
+  type="button"
+  class="btn-close"
+  data-bs-dismiss="modal"
+  aria-label="Close"
+></button>
+</div>     
+   <div class="modal-body">
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input
+            type="text"
+            id="newProductName"
+            class="form-control mb-2"
+            placeholder="Enter name of product"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            id="newImgUrl"
+            class="form-control mb-2"
+            placeholder="Enter image url"
+          />
+        </div>
+
+        <div class="col">
+          <input
+            type="text"
+            id="newProductDescription"
+            class="form-control mb-2"
+            placeholder="Enter product description"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            id="newLocation"
+            class="form-control mb-2"
+            placeholder="Enter location"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            id="newPrice"
+            class="form-control mb-2"
+            placeholder="Enter price in ($)"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-light border"
+      data-bs-dismiss="modal"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      class="btn btn-dark"
+      data-bs-dismiss="modal"
+      id="newProductBtn"
+    >
+      Add product
+    </button>
+  </div>
+</div>
+</div>
+</div>
+    </div>
+    </section>
+
+    <section class="labourers" id="labourers">
+    <div class="bg-dark text-light">
+      <div class="heading_container">
+        <h2 style="text-align: center;padding-top:20px;">
+          Why you should signup as a labourer for <span style="font-weight:bold;color:orange">Grains</span>
+        </h2>
+      </div>
+      <div class="us_container" style="display:flex; padding-left:20px;">
+        <div class="box">
+          <div class="img-box">
+            <i class="bi bi-award-fill" style="font-size: 40px; color: #F8BC19;"></i>          
+        </div>
+          <div class="detail-box">
+            <h5>
+             GET CERTIFIED
+            </h5>
+            <p>
+             Receive professional training from experts and get certified 
+            </p>
+          </div>
+        </div>
+        
+        <div class="box">
+          <div class="img-box">
+            <i class="bi bi-hospital-fill" style="font-size: 40px; color: #F8BC19;"></i>          
+        </div>
+          <div class="detail-box">
+            <h5>
+              HEALTH INSURANCE
+        </h5>
+            <p>
+              We understand the risks and health implications involved as a labourer and we cover your health expenses.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img-box" >
+            <i class="bi bi-boxes" style="font-size: 40px; color: #F8BC19;"></i>          
+        </div>
+          <div class="detail-box">
+            <h5>
+              TEAM WORK
+        </h5>
+            <p>
+              Work together with a team 
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <i class="bi bi-cash-coin"style="font-size: 40px; color: #F8BC19;"></i>     
+        </div>
+          <div class="detail-box">
+            <h5>
+              Earn Big
+            </h5>
+            <p>
+              Earn daily rewards and stipends as you work with us
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="bg-dark text-light" id="services" style="margin-bottom: 20px;">
+        <div class="container mt-2" style="max-width: 72em">
+          
+          <nav class="navbar bg-white navbar-light">
+            <div class="container-fluid">
+              <span class="navbar-brand m-0 h4 fw-bold">Grain Labourer Services</span>
+            </div>
+          </nav>
+      
+          <div class="alert alert-service alert-warning sticky-top mt-2" role="alert">
+            <span id="serviceNotification">⌛ Loading...</span>
+          </div>
+      
+          <div class="sign">
+            <form style="width: 100%;">
+              <p>Place your service as a labourer and get hired</p>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceName">Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="newServiceName" name="newServiceName" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceImgUrl">Image URL</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="newServiceImgUrl" name="newServiceImgUrl" placeholder="Your Image URL">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceContact">Contact Detail (phone number/email address</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="newServiceContact" name="newServiceContact" placeholder="Your Contact Details">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceLocation">Country / State</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="newServiceLocation" name="newServiceLocation" placeholder="Your Country / State">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceRate">Rate</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="newServiceRate" name="newServiceRate" placeholder="Your Service Rate in cUSD">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="newServiceDescription">Service Description</label>
+              </div>
+              <div class="col-75">
+                <textarea id="newServiceDescription" name="newServiceDescription" placeholder="Give a brief description of your service" style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <button type="button" id="newServiceBtn" class="btn btn-light">Add Your Service</button>
+            </div>
+            </form>
+          </div>
+          <br><br>
+          <p class="bg-light text-dark"><span style="font-weight: bold;">Available Trainers</span>: <span id="trainersCounts" class="font-monospace">0</span></p>
+      </section>
+      <div id="GrainServices" class="mt-2 row" style="margin-left: 40px;"></div>
+
+    </br></br>
+      <footer class="bg-dark text-white text-center font-small mt-4 fixed-bottom">
+        <div class="footer-copyright py-3">
+          &copy;<script>document.write(new Date().getFullYear());</script> Copyright:
+          <a href="https://about.me/favouradeshina/getstarted" target="_blank" class="text-white"> Spica Sophia</a>. 
+           All Rights Reserved
+        </div>
+      </footer>
+</body>
+<script 
+  src="./js/main.js"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+  crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/ethereum-blockies@0.1.1/blockies.min.js"></script>
+
+</html>
