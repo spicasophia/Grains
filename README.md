@@ -1,7 +1,7 @@
 ## Grain
 
 <p align="center">
-  <a href="https://spicasophia.github.io/Grains/" target="_blank"><img src="[https://i.ibb.co/gWvYRhj/Gymnaseum.png](https://i.ibb.co/ZgbzX6Z/Brown-Aesthetic-Farm-Stay-Accommodation-Facebook-Cover.png)" alt="Grains"></a>
+  <a href="https://spicasophia.github.io/Grains/" target="_blank"><img src="[https://i.ibb.co/ZgbzX6Z/Brown-Aesthetic-Farm-Stay-Accommodation-Facebook-Cover.png](https://i.ibb.co/ZgbzX6Z/Brown-Aesthetic-Farm-Stay-Accommodation-Facebook-Cover.png)" alt="Grains"></a>
 </p>
 
 <p> Grains is a hypothetical farm company that sells farm equipments and also have a freelancing platform for people to place their services as a labourer and get hired for their service.</p>
