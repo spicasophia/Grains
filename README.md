@@ -1,4 +1,4 @@
-## Grain
+## Grains
 
 <p align="center">
   <a href="https://spicasophia.github.io/Grains/" target="_blank"><img src="https://i.ibb.co/ZgbzX6Z/Brown-Aesthetic-Farm-Stay-Accommodation-Facebook-Cover.png" alt="Grains"></a>
