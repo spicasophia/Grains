@@ -98,7 +98,7 @@ const getServiceHires = async function (serviceIndex, hiresLength) {
 
 const getServices = async function() {
   const _servicesLength = await contract.methods.getServicesLength().call()
-  document.querySelector("#trainersCounts").textContent = _servicesLength + ' services';
+  document.querySelector("#labourersCounts").textContent = _servicesLength + ' labourers';
 
   const _services = []
     for (let i = 0; i < _servicesLength; i++) {
