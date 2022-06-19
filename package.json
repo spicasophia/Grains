@@ -6,6 +6,7 @@
   "dependencies": {
     "@celo/contractkit": "^1.0.2",
     "bignumber.js": "^9.0.1",
+    "nodemon": "^2.0.16",
     "rlp": "^2.2.6"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
   },
   "scripts": {
     "dev": "node index.js",
+    "start": "nodemon index.js",
     "build": "webpack"
   }
 }
